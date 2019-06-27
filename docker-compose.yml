@@ -9,11 +9,11 @@ services:
     env_file:
       - env
     volumes:
-      - /env/mytheme:/var/www/html/app/design/frontend/mytheme/default
+      - ./app/mytheme/:/var/www/html/app/design/frontend/mytheme/default
   db:
     image: mysql:5.6.23
     volumes:
-      - /docker/mysql/db-data:/var/lib/mysql/data
+      - ./docker/mysql/db-data/:/var/lib/mysql/data
     env_file:
       - env
   phpmyadmin:
